@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="e8d593bc-37b9-4b73-9ca1-9fa21c2a1e32" name="amedinaj@PC7698 2014-02-04 11:44:32" runUser="MITYC\amedinaj" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="be11aa5b-e296-43e8-aa3f-a6f25c5c95b7">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="amedinaj_PC7698 2014-02-04 11_44_32">
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\AssemblyCheck\bin\Debug\AssemblyCheck.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-02-04T11:44:32.3697764+01:00" queuing="2014-02-04T11:44:36.1197284+01:00" start="2014-02-04T11:44:36.3541004+01:00" finish="2014-02-04T11:44:38.1040780+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestConvertToNumber" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="38f51a11-8915-d44b-a9f7-92805c7f0d92">
+      <Execution id="e506f6c6-5d3e-495b-b2bd-074ba655f1c4" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyVersionTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestConvertToNumber" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="38f51a11-8915-d44b-a9f7-92805c7f0d92" executionId="e506f6c6-5d3e-495b-b2bd-074ba655f1c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="e506f6c6-5d3e-495b-b2bd-074ba655f1c4" testId="38f51a11-8915-d44b-a9f7-92805c7f0d92" testName="TestConvertToNumber" computerName="PC7698" duration="00:00:00.0617022" startTime="2014-02-04T11:44:36.5103484+01:00" endTime="2014-02-04T11:44:37.9790796+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e506f6c6-5d3e-495b-b2bd-074ba655f1c4">
+    </UnitTestResult>
+  </Results>
+</TestRun>
