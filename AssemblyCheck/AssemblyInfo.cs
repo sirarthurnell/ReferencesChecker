@@ -11,7 +11,6 @@ namespace AssemblyCheck
     /// </summary>
     public class AssemblyInfo
     {
-        public string Path { get; private set; }
         public string Name { get; private set; }
         public string FullName { get; private set; }
         public AssemblyVersion Version { get; private set; }
@@ -50,8 +49,6 @@ namespace AssemblyCheck
                              select reference;
 
             var info = CreateInfo(assembly);
-            info.Path = pathToAssembly;
-
             foreach (var reference in references)
             {
                 info.References.Add(CreateInfo(reference));

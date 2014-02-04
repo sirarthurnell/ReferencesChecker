@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="82fc880d-0668-41e8-9a95-1dc0df51c95c" name="amedinaj@PC7698 2014-02-04 15:55:33" runUser="MITYC\amedinaj" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="be11aa5b-e296-43e8-aa3f-a6f25c5c95b7">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="amedinaj_PC7698 2014-02-04 15_55_33">
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\AssemblyCheck\bin\Debug\AssemblyCheck.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Mdb.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Pdb.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Rocks.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-02-04T15:55:33.3332436+01:00" queuing="2014-02-04T15:55:33.4738668+01:00" start="2014-02-04T15:55:33.4894916+01:00" finish="2014-02-04T15:55:34.2707316+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="ToStringEqualsFullName" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="691c7277-101d-50ba-0e80-c8d084a070b4">
+      <Execution id="01fa0aa1-aef2-492c-913c-e2ca987f1878" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringEqualsFullName" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="691c7277-101d-50ba-0e80-c8d084a070b4" executionId="01fa0aa1-aef2-492c-913c-e2ca987f1878" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="01fa0aa1-aef2-492c-913c-e2ca987f1878" testId="691c7277-101d-50ba-0e80-c8d084a070b4" testName="ToStringEqualsFullName" computerName="PC7698" duration="00:00:00.1192117" startTime="2014-02-04T15:55:33.5051164+01:00" endTime="2014-02-04T15:55:34.2238572+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="01fa0aa1-aef2-492c-913c-e2ca987f1878">
+    </UnitTestResult>
+  </Results>
+</TestRun>
