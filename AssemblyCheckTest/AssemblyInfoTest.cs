@@ -17,6 +17,18 @@ namespace AssemblyCheckTest
         }
 
         [TestMethod]
+        public void ConstructorTest()
+        {
+            string fullName = "Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756";
+            AssemblyInfo info = new AssemblyInfo(fullName);
+            Assert.AreEqual("Mono.Cecil", info.Name);
+            Assert.AreEqual(fullName, info.FullName);
+            Assert.AreEqual("0738eb9f132ed756", info.PublicKeyToken);
+            Assert.AreEqual("", info.Culture);
+            Assert.AreEqual(info.Version.ToString(), "0.9.5.0");
+        }
+
+        [TestMethod]
         public void ReadAssemblyTest()
         {
             AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
@@ -47,6 +59,13 @@ namespace AssemblyCheckTest
         {
             AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
             Assert.AreEqual(info.ToString(), info.FullName);
+        }
+
+        [TestMethod]
+        public void ToGetFullNameWithoutVersion()
+        {
+            AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
+            Assert.AreEqual(info.GetFullNameWithoutVersion(), "Mono.Cecil, Culture=neutral, PublicKeyToken=0738eb9f132ed756");
         }
     }
 }
