@@ -1,8 +1,13 @@
 ﻿<Window x:Class="ReferencesChecker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="525" xmlns:my="clr-namespace:GraphSharp.Controls;assembly=GraphSharp.Controls" Loaded="Window_Loaded" x:Name="root">
     <Grid>
-        
+        <my:GraphLayout Height="287" HorizontalAlignment="Left"
+                        Margin="12,12,0,0" Name="layout" VerticalAlignment="Top"
+                        Width="479" Graph="{Binding ElementName=root, Path=Graph}"
+                        LayoutAlgorithmType="FR"
+                        OverlapRemovalAlgorithmType="FSA"
+                        HighlightAlgorithmType="Simple" />
     </Grid>
 </Window>
