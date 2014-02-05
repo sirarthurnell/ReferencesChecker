@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using QuickGraph;
+using QuickGraph.Serialization;
 using AssemblyCheck.References;
+using System.Xml;
+using System.IO;
 
 namespace AssemblyCheck
 {
@@ -25,7 +28,13 @@ namespace AssemblyCheck
         /// <summary>
         /// Reference is set, but unsatisfied.
         /// </summary>
-        Broken
+        Broken,
+
+        /// <summary>
+        /// Reference is set, but the corresponding
+        /// assembly doesn't exist.
+        /// </summary>
+        NotExistent
     }
 
     /// <summary>
@@ -59,6 +68,28 @@ namespace AssemblyCheck
         }
 
         /// <summary>
+        /// Saves the graph to file.
+        /// </summary>
+        /// <param name="graph">Graph containing the results
+        /// of the analysis.</param>
+        /// <param name="pathToFile">Path to the file.</param>
+        /// <remarks>The export format is GML.</remarks>
+        public void SaveGraph(AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>> graph, string pathToFile)
+        {
+            try
+            {
+                using (XmlWriter xwr = XmlWriter.Create(pathToFile))
+                {
+                    graph.SerializeToGraphML<AssemblyInfo, TaggedEdge<AssemblyInfo, string>, AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>>>(xwr);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new IOException("Unable to export the references graph.", ex);
+            }            
+        }
+
+        /// <summary>
         /// Updates the graph with references existent
         /// between assemblies.
         /// </summary>
@@ -80,6 +111,7 @@ namespace AssemblyCheck
         {
             foreach (AssemblyInfo reference in source.References)
             {
+                bool existsBetweenAssemblies = false;
                 foreach (AssemblyInfo target in _infos)
                 {
                     var state = reference.CheckReference(target);
@@ -89,18 +121,27 @@ namespace AssemblyCheck
                             break;
 
                         case ReferenceState.Ok:
-                            var okEdge = new TaggedEdge<AssemblyInfo, string>(source, target, "Ok");
+                            var okEdge = new TaggedEdge<AssemblyInfo, string>(source, target, ReferenceState.Ok.ToString());
                             graph.AddEdge(okEdge);
+                            existsBetweenAssemblies = true;
                             break;
 
                         case ReferenceState.Broken:
-                            var brokenEdge = new TaggedEdge<AssemblyInfo, string>(source, target, "Broken");
+                            var brokenEdge = new TaggedEdge<AssemblyInfo, string>(source, target, ReferenceState.Broken.ToString());
                             graph.AddEdge(brokenEdge);
-                            break;                        
+                            existsBetweenAssemblies = true;
+                            break;
 
                         default:
                             throw new InvalidOperationException("Unrecognized reference state.");
                     }
+                }
+
+                if (!existsBetweenAssemblies)
+                {
+                    graph.AddVertex(reference);
+                    var brokenEdge = new TaggedEdge<AssemblyInfo, string>(source, reference, ReferenceState.NotExistent.ToString());
+                    graph.AddEdge(brokenEdge);
                 }
             }
         }
