@@ -11,33 +11,6 @@ using System.IO;
 namespace AssemblyCheck
 {
     /// <summary>
-    /// State of a reference between two assemblies.
-    /// </summary>
-    public enum ReferenceState
-    {
-        /// <summary>
-        /// No reference between them.
-        /// </summary>
-        None,
-
-        /// <summary>
-        /// Reference can work.
-        /// </summary>
-        Ok,
-
-        /// <summary>
-        /// Reference is set, but unsatisfied.
-        /// </summary>
-        Broken,
-
-        /// <summary>
-        /// Reference is set, but the corresponding
-        /// assembly doesn't exist.
-        /// </summary>
-        NotExistent
-    }
-
-    /// <summary>
     /// Analyzes references between a set of assemblies.
     /// </summary>
     public class ReferencesAnalyzer
@@ -57,9 +30,9 @@ namespace AssemblyCheck
         /// Composes the references graph.
         /// </summary>
         /// <returns>Graph of references between assemblies.</returns>
-        public AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>> ComposeGraph()
+        public AnalysisResult Analyze()
         {
-            var graph = new AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>>();
+            var graph = new AnalysisResult();
             graph.AddVertexRange(_infos);
 
             UpdateGraph(graph);
@@ -74,13 +47,13 @@ namespace AssemblyCheck
         /// of the analysis.</param>
         /// <param name="pathToFile">Path to the file.</param>
         /// <remarks>The export format is GML.</remarks>
-        public void SaveGraph(AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>> graph, string pathToFile)
+        public void SaveAnalysis(AnalysisResult graph, string pathToFile)
         {
             try
             {
                 using (XmlWriter xwr = XmlWriter.Create(pathToFile))
                 {
-                    graph.SerializeToGraphML<AssemblyInfo, TaggedEdge<AssemblyInfo, string>, AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>>>(xwr);
+                    graph.SerializeToGraphML<AssemblyInfo, ReferenceEdge, AnalysisResult>(xwr);
                 }
             }
             catch (Exception ex)
@@ -94,7 +67,7 @@ namespace AssemblyCheck
         /// between assemblies.
         /// </summary>
         /// <param name="graph">Graph to update.</param>
-        private void UpdateGraph(AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>> graph)
+        private void UpdateGraph(AnalysisResult graph)
         {
             foreach (AssemblyInfo info in _infos)
             {
@@ -107,7 +80,7 @@ namespace AssemblyCheck
         /// </summary>
         /// <param name="source">Info of the assembly.</param>
         /// <param name="graph">References graph.</param>
-        private void AddReferences(AssemblyInfo source, AdjacencyGraph<AssemblyInfo, TaggedEdge<AssemblyInfo, string>> graph)
+        private void AddReferences(AssemblyInfo source, AnalysisResult graph)
         {
             foreach (AssemblyInfo reference in source.References)
             {
@@ -121,13 +94,13 @@ namespace AssemblyCheck
                             break;
 
                         case ReferenceState.Ok:
-                            var okEdge = new TaggedEdge<AssemblyInfo, string>(source, target, ReferenceState.Ok.ToString());
+                            var okEdge = new ReferenceEdge(source, target, ReferenceState.Ok);
                             graph.AddEdge(okEdge);
                             existsBetweenAssemblies = true;
                             break;
 
                         case ReferenceState.Broken:
-                            var brokenEdge = new TaggedEdge<AssemblyInfo, string>(source, target, ReferenceState.Broken.ToString());
+                            var brokenEdge = new ReferenceEdge(source, target, ReferenceState.Broken);
                             graph.AddEdge(brokenEdge);
                             existsBetweenAssemblies = true;
                             break;
@@ -140,7 +113,7 @@ namespace AssemblyCheck
                 if (!existsBetweenAssemblies)
                 {
                     graph.AddVertex(reference);
-                    var brokenEdge = new TaggedEdge<AssemblyInfo, string>(source, reference, ReferenceState.NotExistent.ToString());
+                    var brokenEdge = new ReferenceEdge(source, reference, ReferenceState.NotExistent);
                     graph.AddEdge(brokenEdge);
                 }
             }

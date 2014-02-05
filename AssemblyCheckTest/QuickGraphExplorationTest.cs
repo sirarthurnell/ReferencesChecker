@@ -28,18 +28,18 @@ namespace AssemblyCheckTest
             var graph = CreateGraph();
             using (XmlWriter xwr = XmlWriter.Create(pathToFile))
             {
-                graph.SerializeToGraphML<int, TaggedEdge<int, string>, AdjacencyGraph<int, TaggedEdge<int, string>>>(xwr);
+                graph.SerializeToGraphML<int, TaggedEdge<int, string>, BidirectionalGraph<int, TaggedEdge<int, string>>>(xwr);
             }
 
             Assert.IsTrue(File.Exists(pathToFile));
         }
 
-        private AdjacencyGraph<int, TaggedEdge<int, string>> CreateGraph()
+        private BidirectionalGraph<int, TaggedEdge<int, string>> CreateGraph()
         {
             int value1 = 1;
             int value2 = 2;
 
-            var graph = new AdjacencyGraph<int, TaggedEdge<int, string>>();
+            var graph = new BidirectionalGraph<int, TaggedEdge<int, string>>();
             graph.AddVertex(value1);
             graph.AddVertex(value2);
 

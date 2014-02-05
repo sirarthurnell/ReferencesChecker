@@ -64,7 +64,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalysisResult.cs" />
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AssemblyReader.cs" />
+    <Compile Include="ReferenceEdge.cs" />
     <Compile Include="ReferenceExtensions.cs" />
     <Compile Include="AssemblyVersion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

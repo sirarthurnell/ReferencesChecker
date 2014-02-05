@@ -31,7 +31,7 @@ namespace AssemblyCheckTest
         [TestMethod]
         public void ReadAssemblyTest()
         {
-            AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
+            AssemblyInfo info = AssemblyReader.ReadAssembly(_pathToAssembly);
             Assert.AreEqual("Mono.Cecil", info.Name);
             Assert.AreEqual("Mono.Cecil, Version=0.9.5.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756", info.FullName);
             Assert.AreEqual("0738eb9f132ed756", info.PublicKeyToken);
@@ -43,7 +43,7 @@ namespace AssemblyCheckTest
         [TestMethod]
         public void ReadReferenceTest()
         {
-            AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
+            AssemblyInfo info = AssemblyReader.ReadAssembly(_pathToAssembly);
             AssemblyInfo reference = info.References[0];
 
             Assert.AreEqual("mscorlib", reference.Name);
@@ -57,14 +57,14 @@ namespace AssemblyCheckTest
         [TestMethod]
         public void ToStringEqualsFullName()
         {
-            AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
+            AssemblyInfo info = AssemblyReader.ReadAssembly(_pathToAssembly);
             Assert.AreEqual(info.ToString(), info.FullName);
         }
 
         [TestMethod]
         public void ToGetFullNameWithoutVersion()
         {
-            AssemblyInfo info = AssemblyInfo.ReadAssembly(_pathToAssembly);
+            AssemblyInfo info = AssemblyReader.ReadAssembly(_pathToAssembly);
             Assert.AreEqual(info.GetFullNameWithoutVersion(), "Mono.Cecil, Culture=neutral, PublicKeyToken=0738eb9f132ed756");
         }
     }

@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="790a1148-c3f2-40a5-9e28-a64060d8e95c" name="amedinaj@PC7698 2014-02-05 17:27:37" runUser="MITYC\amedinaj" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="be11aa5b-e296-43e8-aa3f-a6f25c5c95b7">
+    <Description>Esta es la configuración de pruebas predeterminada para una ejecución de pruebas local.</Description>
+    <Deployment enabled="false" runDeploymentRoot="amedinaj_PC7698 2014-02-05 17_27_37">
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Pdb.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Rocks.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.Mdb.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Graphviz.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\AssemblyCheck\bin\Debug\AssemblyCheck.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\Mono.Cecil.0.9.5.4\lib\net40\Mono.Cecil.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Data.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.dll" />
+      <DeploymentItem filename="C:\Documents and Settings\amedinaj\Mis documentos\Visual Studio 2010\Projects\ReferencesChecker\packages\QuickGraph.3.6.61119.7\lib\net4\QuickGraph.Serialization.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2014-02-05T17:27:37.7438248+01:00" queuing="2014-02-05T17:27:38.0406846+01:00" start="2014-02-05T17:27:38.0719330+01:00" finish="2014-02-05T17:27:39.8062192+01:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="16" executed="16" passed="16" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestSaveGraph" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="d9d666a8-f4bc-794d-6e11-d056044fdf56">
+      <Execution id="7a7bd6cc-a219-4cf6-a838-65192e165872" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.ReferencesAnalyzerTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestSaveGraph" />
+    </UnitTest>
+    <UnitTest name="TestComparation" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="cf05b06a-0112-dc35-25ae-d76c0638870d">
+      <Execution id="d37e97ef-8eb4-4fb5-bfae-94a01cebde1e" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyVersionTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestComparation" />
+    </UnitTest>
+    <UnitTest name="TestCheckNotExistentTargetReference" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="dbff760a-c708-c60e-09d4-2cd554419c4a">
+      <Execution id="59797128-3462-44d6-aa74-b184589fa437" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.ReferencesAnalyzerTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCheckNotExistentTargetReference" />
+    </UnitTest>
+    <UnitTest name="ToGetFullNameWithoutVersion" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="f258982f-1402-765d-3fc2-bc5f8dcede36">
+      <Execution id="0ccdbe88-74bd-4399-9ebe-e6dd47051b3f" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToGetFullNameWithoutVersion" />
+    </UnitTest>
+    <UnitTest name="ConstructorTest" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="f9805428-17b9-e35e-3cbf-c30257d85986">
+      <Execution id="f69ed457-0a65-454e-b196-73f3f9e187a3" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ConstructorTest" />
+    </UnitTest>
+    <UnitTest name="TestIntegrity" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="1fe276e7-fa76-3382-c68e-8a90367b8e36">
+      <Execution id="49af5b4c-0f80-459c-8c54-b10d59a22a71" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.ReferencesAnalyzerTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestIntegrity" />
+    </UnitTest>
+    <UnitTest name="TestCreateBasicGraph" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="640a0f63-23ab-0f17-e1c0-36d720f0d9af">
+      <Execution id="1c29f028-fe27-4d09-9b07-1c4af56abb3e" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.QuickGraphExplorationTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCreateBasicGraph" />
+    </UnitTest>
+    <UnitTest name="TestStringConstructor" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="ddce6c97-db94-fc06-4fea-145811cc5880">
+      <Execution id="bf7b22a9-3f5d-4405-b6bd-a1e4908a7d30" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyVersionTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestStringConstructor" />
+    </UnitTest>
+    <UnitTest name="TestCheckBrokenTargetReference" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="b4667830-1d06-a8d4-045a-b5ca75b3d842">
+      <Execution id="e9112204-7230-4524-a0bf-e69d28911a1b" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.ReferencesAnalyzerTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCheckBrokenTargetReference" />
+    </UnitTest>
+    <UnitTest name="ReadReferenceTest" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="91c98744-b0a9-ca49-f340-678aef997703">
+      <Execution id="9a99b4d2-cbf6-4027-a129-782f923a3a41" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadReferenceTest" />
+    </UnitTest>
+    <UnitTest name="TestCheckOkTargetReference" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="6ea15e97-51ae-278e-c0da-be6e1354fc37">
+      <Execution id="50a04c9d-9176-4089-aff4-93a2a2b68ef9" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.ReferencesAnalyzerTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestCheckOkTargetReference" />
+    </UnitTest>
+    <UnitTest name="ReadAssemblyTest" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="a4c08441-0a97-2091-e34b-5c0af76946ae">
+      <Execution id="3863f475-aad7-4940-998f-a3a584131467" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ReadAssemblyTest" />
+    </UnitTest>
+    <UnitTest name="LoadAssemblyReferencesTest" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="247dc44b-9242-2ccd-898f-40cc521a5b78">
+      <Execution id="1b96fa17-2a0a-47ae-a3e9-ffb1d08abefe" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.MonoCecilExplorationTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="LoadAssemblyReferencesTest" />
+    </UnitTest>
+    <UnitTest name="TestToString" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="c4504208-0725-4c70-bea2-3cc97b04a788">
+      <Execution id="36d79958-78e7-4d7c-a633-5be1ef288641" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyVersionTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestToString" />
+    </UnitTest>
+    <UnitTest name="TestExportGraph" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="6e5bf719-9f09-11f0-fce2-0731d4a30bc8">
+      <Execution id="e580c9ea-a9b9-4dd3-9882-191c9050bd45" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.QuickGraphExplorationTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestExportGraph" />
+    </UnitTest>
+    <UnitTest name="ToStringEqualsFullName" storage="c:\documents and settings\amedinaj\mis documentos\visual studio 2010\projects\referenceschecker\assemblychecktest\bin\debug\assemblychecktest.dll" id="691c7277-101d-50ba-0e80-c8d084a070b4">
+      <Execution id="fbdf8ecd-f15d-479a-9add-75eb922036a3" />
+      <TestMethod codeBase="C:/Documents and Settings/amedinaj/Mis documentos/Visual Studio 2010/Projects/ReferencesChecker/AssemblyCheckTest/bin/Debug/AssemblyCheckTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AssemblyCheckTest.AssemblyInfoTest, AssemblyCheckTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="ToStringEqualsFullName" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Resultados que no están en la lista" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="Todos los resultados cargados" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="1fe276e7-fa76-3382-c68e-8a90367b8e36" executionId="49af5b4c-0f80-459c-8c54-b10d59a22a71" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="247dc44b-9242-2ccd-898f-40cc521a5b78" executionId="1b96fa17-2a0a-47ae-a3e9-ffb1d08abefe" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="640a0f63-23ab-0f17-e1c0-36d720f0d9af" executionId="1c29f028-fe27-4d09-9b07-1c4af56abb3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="691c7277-101d-50ba-0e80-c8d084a070b4" executionId="fbdf8ecd-f15d-479a-9add-75eb922036a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6e5bf719-9f09-11f0-fce2-0731d4a30bc8" executionId="e580c9ea-a9b9-4dd3-9882-191c9050bd45" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ea15e97-51ae-278e-c0da-be6e1354fc37" executionId="50a04c9d-9176-4089-aff4-93a2a2b68ef9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="91c98744-b0a9-ca49-f340-678aef997703" executionId="9a99b4d2-cbf6-4027-a129-782f923a3a41" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="a4c08441-0a97-2091-e34b-5c0af76946ae" executionId="3863f475-aad7-4940-998f-a3a584131467" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b4667830-1d06-a8d4-045a-b5ca75b3d842" executionId="e9112204-7230-4524-a0bf-e69d28911a1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4504208-0725-4c70-bea2-3cc97b04a788" executionId="36d79958-78e7-4d7c-a633-5be1ef288641" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cf05b06a-0112-dc35-25ae-d76c0638870d" executionId="d37e97ef-8eb4-4fb5-bfae-94a01cebde1e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9d666a8-f4bc-794d-6e11-d056044fdf56" executionId="7a7bd6cc-a219-4cf6-a838-65192e165872" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dbff760a-c708-c60e-09d4-2cd554419c4a" executionId="59797128-3462-44d6-aa74-b184589fa437" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ddce6c97-db94-fc06-4fea-145811cc5880" executionId="bf7b22a9-3f5d-4405-b6bd-a1e4908a7d30" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f258982f-1402-765d-3fc2-bc5f8dcede36" executionId="0ccdbe88-74bd-4399-9ebe-e6dd47051b3f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f9805428-17b9-e35e-3cbf-c30257d85986" executionId="f69ed457-0a65-454e-b196-73f3f9e187a3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="49af5b4c-0f80-459c-8c54-b10d59a22a71" testId="1fe276e7-fa76-3382-c68e-8a90367b8e36" testName="TestIntegrity" computerName="PC7698" duration="00:00:00.1159239" startTime="2014-02-05T17:27:38.0875572+01:00" endTime="2014-02-05T17:27:38.9156398+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="49af5b4c-0f80-459c-8c54-b10d59a22a71">
+    </UnitTestResult>
+    <UnitTestResult executionId="1b96fa17-2a0a-47ae-a3e9-ffb1d08abefe" testId="247dc44b-9242-2ccd-898f-40cc521a5b78" testName="LoadAssemblyReferencesTest" computerName="PC7698" duration="00:00:00.3079517" startTime="2014-02-05T17:27:38.9156398+01:00" endTime="2014-02-05T17:27:39.2437480+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1b96fa17-2a0a-47ae-a3e9-ffb1d08abefe">
+    </UnitTestResult>
+    <UnitTestResult executionId="1c29f028-fe27-4d09-9b07-1c4af56abb3e" testId="640a0f63-23ab-0f17-e1c0-36d720f0d9af" testName="TestCreateBasicGraph" computerName="PC7698" duration="00:00:00.0244307" startTime="2014-02-05T17:27:39.2593722+01:00" endTime="2014-02-05T17:27:39.3062448+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c29f028-fe27-4d09-9b07-1c4af56abb3e">
+    </UnitTestResult>
+    <UnitTestResult executionId="fbdf8ecd-f15d-479a-9add-75eb922036a3" testId="691c7277-101d-50ba-0e80-c8d084a070b4" testName="ToStringEqualsFullName" computerName="PC7698" duration="00:00:00.0127326" startTime="2014-02-05T17:27:39.3062448+01:00" endTime="2014-02-05T17:27:39.3374932+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fbdf8ecd-f15d-479a-9add-75eb922036a3">
+    </UnitTestResult>
+    <UnitTestResult executionId="e580c9ea-a9b9-4dd3-9882-191c9050bd45" testId="6e5bf719-9f09-11f0-fce2-0731d4a30bc8" testName="TestExportGraph" computerName="PC7698" duration="00:00:00.1172302" startTime="2014-02-05T17:27:39.3374932+01:00" endTime="2014-02-05T17:27:39.4624868+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e580c9ea-a9b9-4dd3-9882-191c9050bd45">
+    </UnitTestResult>
+    <UnitTestResult executionId="50a04c9d-9176-4089-aff4-93a2a2b68ef9" testId="6ea15e97-51ae-278e-c0da-be6e1354fc37" testName="TestCheckOkTargetReference" computerName="PC7698" duration="00:00:00.0009336" startTime="2014-02-05T17:27:39.4781110+01:00" endTime="2014-02-05T17:27:39.4937352+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50a04c9d-9176-4089-aff4-93a2a2b68ef9">
+    </UnitTestResult>
+    <UnitTestResult executionId="9a99b4d2-cbf6-4027-a129-782f923a3a41" testId="91c98744-b0a9-ca49-f340-678aef997703" testName="ReadReferenceTest" computerName="PC7698" duration="00:00:00.0023941" startTime="2014-02-05T17:27:39.4937352+01:00" endTime="2014-02-05T17:27:39.5093594+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a99b4d2-cbf6-4027-a129-782f923a3a41">
+    </UnitTestResult>
+    <UnitTestResult executionId="3863f475-aad7-4940-998f-a3a584131467" testId="a4c08441-0a97-2091-e34b-5c0af76946ae" testName="ReadAssemblyTest" computerName="PC7698" duration="00:00:00.0022002" startTime="2014-02-05T17:27:39.5249836+01:00" endTime="2014-02-05T17:27:39.5249836+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3863f475-aad7-4940-998f-a3a584131467">
+    </UnitTestResult>
+    <UnitTestResult executionId="e9112204-7230-4524-a0bf-e69d28911a1b" testId="b4667830-1d06-a8d4-045a-b5ca75b3d842" testName="TestCheckBrokenTargetReference" computerName="PC7698" duration="00:00:00.0014060" startTime="2014-02-05T17:27:39.5406078+01:00" endTime="2014-02-05T17:27:39.5562320+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e9112204-7230-4524-a0bf-e69d28911a1b">
+    </UnitTestResult>
+    <UnitTestResult executionId="36d79958-78e7-4d7c-a633-5be1ef288641" testId="c4504208-0725-4c70-bea2-3cc97b04a788" testName="TestToString" computerName="PC7698" duration="00:00:00.0008456" startTime="2014-02-05T17:27:39.5562320+01:00" endTime="2014-02-05T17:27:39.5718562+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="36d79958-78e7-4d7c-a633-5be1ef288641">
+    </UnitTestResult>
+    <UnitTestResult executionId="d37e97ef-8eb4-4fb5-bfae-94a01cebde1e" testId="cf05b06a-0112-dc35-25ae-d76c0638870d" testName="TestComparation" computerName="PC7698" duration="00:00:00.0045567" startTime="2014-02-05T17:27:39.5874804+01:00" endTime="2014-02-05T17:27:39.6031046+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d37e97ef-8eb4-4fb5-bfae-94a01cebde1e">
+    </UnitTestResult>
+    <UnitTestResult executionId="7a7bd6cc-a219-4cf6-a838-65192e165872" testId="d9d666a8-f4bc-794d-6e11-d056044fdf56" testName="TestSaveGraph" computerName="PC7698" duration="00:00:00.0468654" startTime="2014-02-05T17:27:39.6031046+01:00" endTime="2014-02-05T17:27:39.6656014+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7a7bd6cc-a219-4cf6-a838-65192e165872">
+    </UnitTestResult>
+    <UnitTestResult executionId="59797128-3462-44d6-aa74-b184589fa437" testId="dbff760a-c708-c60e-09d4-2cd554419c4a" testName="TestCheckNotExistentTargetReference" computerName="PC7698" duration="00:00:00.0008196" startTime="2014-02-05T17:27:39.6812256+01:00" endTime="2014-02-05T17:27:39.6812256+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="59797128-3462-44d6-aa74-b184589fa437">
+    </UnitTestResult>
+    <UnitTestResult executionId="bf7b22a9-3f5d-4405-b6bd-a1e4908a7d30" testId="ddce6c97-db94-fc06-4fea-145811cc5880" testName="TestStringConstructor" computerName="PC7698" duration="00:00:00.0008741" startTime="2014-02-05T17:27:39.6968498+01:00" endTime="2014-02-05T17:27:39.6968498+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bf7b22a9-3f5d-4405-b6bd-a1e4908a7d30">
+    </UnitTestResult>
+    <UnitTestResult executionId="0ccdbe88-74bd-4399-9ebe-e6dd47051b3f" testId="f258982f-1402-765d-3fc2-bc5f8dcede36" testName="ToGetFullNameWithoutVersion" computerName="PC7698" duration="00:00:00.0017767" startTime="2014-02-05T17:27:39.7124740+01:00" endTime="2014-02-05T17:27:39.7280982+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0ccdbe88-74bd-4399-9ebe-e6dd47051b3f">
+    </UnitTestResult>
+    <UnitTestResult executionId="f69ed457-0a65-454e-b196-73f3f9e187a3" testId="f9805428-17b9-e35e-3cbf-c30257d85986" testName="ConstructorTest" computerName="PC7698" duration="00:00:00.0008014" startTime="2014-02-05T17:27:39.7280982+01:00" endTime="2014-02-05T17:27:39.7437224+01:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f69ed457-0a65-454e-b196-73f3f9e187a3">
+    </UnitTestResult>
+  </Results>
+</TestRun>

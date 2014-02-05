@@ -21,14 +21,14 @@ namespace AssemblyCheckTest
 
             ReferencesAnalyzer analyzer = new ReferencesAnalyzer();
             analyzer.Initialize(new AssemblyInfo[] { source, target });
-            var graph = analyzer.ComposeGraph();
+            var graph = analyzer.Analyze();
 
             Assert.IsTrue(graph.ContainsVertex(source));
             Assert.IsTrue(graph.ContainsVertex(target));
             Assert.IsTrue(graph.VertexCount == 2);
             Assert.IsTrue(graph.EdgeCount == 1);
 
-            TaggedEdge<AssemblyInfo, string> edge;
+            ReferenceEdge edge;
             Assert.IsTrue(graph.TryGetEdge(source, target, out edge));
             Assert.IsNotNull(edge);
         }
@@ -42,11 +42,11 @@ namespace AssemblyCheckTest
 
             ReferencesAnalyzer analyzer = new ReferencesAnalyzer();
             analyzer.Initialize(new AssemblyInfo[]{source, target});
-            var graph = analyzer.ComposeGraph();
+            var graph = analyzer.Analyze();
 
-            TaggedEdge<AssemblyInfo, string> edge;
+            ReferenceEdge edge;
             graph.TryGetEdge(source, target, out edge);
-            Assert.IsTrue(edge.Tag == "Ok");
+            Assert.IsTrue(edge.State == ReferenceState.Ok);
         }
 
         [TestMethod]
@@ -59,11 +59,11 @@ namespace AssemblyCheckTest
 
             ReferencesAnalyzer analyzer = new ReferencesAnalyzer();
             analyzer.Initialize(new AssemblyInfo[] { source, target });
-            var graph = analyzer.ComposeGraph();
+            var graph = analyzer.Analyze();
 
-            TaggedEdge<AssemblyInfo, string> edge;
+            ReferenceEdge edge;
             graph.TryGetEdge(source, target, out edge);
-            Assert.IsTrue(edge.Tag == "Broken");
+            Assert.IsTrue(edge.State == ReferenceState.Broken);
         }
 
         [TestMethod]
@@ -76,11 +76,11 @@ namespace AssemblyCheckTest
 
             ReferencesAnalyzer analyzer = new ReferencesAnalyzer();
             analyzer.Initialize(new AssemblyInfo[] { source, target });
-            var graph = analyzer.ComposeGraph();
+            var graph = analyzer.Analyze();
 
-            TaggedEdge<AssemblyInfo, string> edge;
+            ReferenceEdge edge;
             graph.TryGetEdge(source, notExistentReference, out edge);
-            Assert.IsTrue(edge.Tag == "NotExistent");
+            Assert.IsTrue(edge.State == ReferenceState.NotExistent);
         }
 
         [TestMethod]
@@ -93,10 +93,10 @@ namespace AssemblyCheckTest
 
             ReferencesAnalyzer analyzer = new ReferencesAnalyzer();
             analyzer.Initialize(new AssemblyInfo[] { source, target });
-            var graph = analyzer.ComposeGraph();
+            var graph = analyzer.Analyze();
 
             string pathToFile = AppDomain.CurrentDomain.BaseDirectory.TrimEnd(new char[] { '\\' }) + "\\referencesGraph.gml";
-            analyzer.SaveGraph(graph, pathToFile);
+            analyzer.SaveAnalysis(graph, pathToFile);
 
             Assert.IsTrue(File.Exists(pathToFile));
         }

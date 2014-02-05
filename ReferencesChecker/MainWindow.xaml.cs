@@ -12,6 +12,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using QuickGraph;
+using AssemblyCheck;
+using System.IO;
 
 namespace ReferencesChecker
 {
@@ -20,9 +22,8 @@ namespace ReferencesChecker
     /// </summary>
     public partial class MainWindow : Window
     {
-        private IBidirectionalGraph<object, IEdge<object>> _graph;
-
-        public IBidirectionalGraph<object, IEdge<object>> Graph
+        private AnalysisResult _graph;
+        public AnalysisResult Graph
         {
             get
             {
@@ -31,29 +32,35 @@ namespace ReferencesChecker
         }
 
         public MainWindow()
-        {            
-            CreateMinimalGraph();
+        {
+            CreateGraphFromAssembliesDirectory(@"C:\Archivos de programa\Archivos comunes\Mityc\Sigetel\Assemblies\Frmwk2");
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Creates the references graph between assemblies
+        /// contained in a directory.
+        /// </summary>
+        private void CreateGraphFromAssembliesDirectory(string pathToDirectory)
         {
-            
-        }
+            DirectoryInfo directory = new DirectoryInfo(pathToDirectory);
+            var files = directory.EnumerateFiles("*.dll", SearchOption.AllDirectories);
+            var assemblies = new List<AssemblyInfo>();
 
-        private void CreateMinimalGraph()
-        {
-            int value1 = 1;
-            int value2 = 2;
+            foreach (FileInfo file in files)
+            {
+                try
+                {
+                    var assembly = AssemblyReader.ReadAssembly(file.FullName);
+                    assemblies.Add(assembly);
+                }
+                catch { }
+            }
 
-            var graph = new BidirectionalGraph<object, IEdge<object>>();
-            graph.AddVertex(value1);
-            graph.AddVertex(value2);
-
-            var edge1 = new Edge<object>(value1, value2);
-            graph.AddEdge(edge1);
-
-            _graph = graph;
+            var analyzer = new ReferencesAnalyzer();
+            analyzer.Initialize(assemblies);
+            var analyzerResults = analyzer.Analyze();
+            _graph = analyzerResults;
         }
     }
 }
