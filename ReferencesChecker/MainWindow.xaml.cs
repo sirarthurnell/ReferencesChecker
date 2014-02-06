@@ -22,45 +22,18 @@ namespace ReferencesChecker
     /// </summary>
     public partial class MainWindow : Window
     {
-        private AnalysisResult _graph;
-        public AnalysisResult Graph
-        {
-            get
-            {
-                return _graph;
-            }
-        }
+        private MainWindowViewModel _viewModel;
 
         public MainWindow()
         {
-            //CreateGraphFromAssembliesDirectory(@"C:\Archivos de programa\Archivos comunes\Mityc\Sigetel\Assemblies\Frmwk2");
+            _viewModel = new MainWindowViewModel();
+            this.DataContext = _viewModel;
             InitializeComponent();
         }
 
-        /// <summary>
-        /// Creates the references graph between assemblies
-        /// contained in a directory.
-        /// </summary>
-        private void CreateGraphFromAssembliesDirectory(string pathToDirectory)
+        private void LoadAssembliesDirectory(string pathToDirectory)
         {
-            DirectoryInfo directory = new DirectoryInfo(pathToDirectory);
-            var files = directory.EnumerateFiles("*.dll", SearchOption.AllDirectories);
-            var assemblies = new List<AssemblyInfo>();
-
-            foreach (FileInfo file in files)
-            {
-                try
-                {
-                    var assembly = AssemblyReader.ReadAssembly(file.FullName);
-                    assemblies.Add(assembly);
-                }
-                catch { }
-            }
-
-            var analyzer = new ReferencesAnalyzer();
-            analyzer.Initialize(assemblies);
-            var analyzerResults = analyzer.Analyze();
-            _graph = analyzerResults;
+            _viewModel.CreateGraphFromAssembliesDirectory(pathToDirectory);
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -69,9 +42,7 @@ namespace ReferencesChecker
             dlg.Description = "Select the folder containing the assemblies you want to analyze.";
             if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                CreateGraphFromAssembliesDirectory(dlg.SelectedPath);
-                var bindingExpression = layout.GetBindingExpression(AnalysisLayout.GraphProperty);
-                bindingExpression.UpdateTarget();
+                LoadAssembliesDirectory(dlg.SelectedPath);
             }
         }
 

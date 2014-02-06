@@ -17,8 +17,8 @@
         <zoom:ZoomControl Grid.Row="1">
         <my1:AnalysisLayout x:Name="layout" HorizontalAlignment="Stretch"
                         Margin="0,0,0,0" VerticalAlignment="Stretch"
-                        Graph="{Binding ElementName=root, Path=Graph}"
-                        LayoutAlgorithmType="FR"
+                        Graph="{Binding Path=Graph}"
+						LayoutAlgorithmType="{Binding Path=LayoutAlgorithmType, Mode=OneWay}"
                         OverlapRemovalAlgorithmType="FSA"
                         HighlightAlgorithmType="Simple" />
         </zoom:ZoomControl>        
