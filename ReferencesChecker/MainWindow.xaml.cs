@@ -33,7 +33,7 @@ namespace ReferencesChecker
 
         public MainWindow()
         {
-            CreateGraphFromAssembliesDirectory(@"C:\Archivos de programa\Archivos comunes\Mityc\Sigetel\Assemblies\Frmwk2");
+            //CreateGraphFromAssembliesDirectory(@"C:\Archivos de programa\Archivos comunes\Mityc\Sigetel\Assemblies\Frmwk2");
             InitializeComponent();
         }
 
@@ -61,6 +61,23 @@ namespace ReferencesChecker
             analyzer.Initialize(assemblies);
             var analyzerResults = analyzer.Analyze();
             _graph = analyzerResults;
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            var dlg = new System.Windows.Forms.FolderBrowserDialog();
+            dlg.Description = "Select the folder containing the assemblies you want to analyze.";
+            if (dlg.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                CreateGraphFromAssembliesDirectory(dlg.SelectedPath);
+                var bindingExpression = layout.GetBindingExpression(AnalysisLayout.GraphProperty);
+                bindingExpression.UpdateTarget();
+            }
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
