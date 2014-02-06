@@ -34,6 +34,7 @@ namespace ReferencesChecker
         private void LoadAssembliesDirectory(string pathToDirectory)
         {
             _viewModel.CreateGraphFromAssembliesDirectory(pathToDirectory);
+            _viewModel.LayoutAlgorithmType = "LinLog";
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

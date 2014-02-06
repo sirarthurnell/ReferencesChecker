@@ -10,7 +10,7 @@ namespace ReferencesChecker
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {      
-        private string layoutAlgorithmType = "FR";
+        private string layoutAlgorithmType;
         private AnalysisResult graph;
 
         /// <summary>
